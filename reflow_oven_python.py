@@ -83,21 +83,21 @@ try:
                 cooling_state = True  
                 preheat_state = False
                 # SEND EMAIL THAT THE REFLOW PROCESS IS DONE AND PCB IS READY
-                recipient_email = "mazda.farrahi@gmail.com"  # Recipient's email address
+                recipient_email = "recipient.email@gmail.com"  # Recipient's email address
                 subject = "PCB Reflow Process Completed"
                 body = "Your PCB reflow process is complete, and the PCB is ready for further handling."
 
                 # Compose the email message
                 message = MIMEText(body)
                 message["Subject"] = subject
-                message["From"] = "my291oven@gmail.com"  
+                message["From"] = "reflowoven@gmail.com"  
                 message["To"] = recipient_email
 
                 # Connect to the SMTP server and send the email
                 smtp_server = "smtp.gmail.com"  
                 smtp_port = 587  
-                smtp_username = "my291oven@gmail.com"  
-                smtp_password = "okizqsmoqbgvootb" 
+                smtp_username = "reflowoven@gmail.com"  
+                smtp_password = "reflowovenpassword" 
 
                 try:
                     with smtplib.SMTP(smtp_server, smtp_port) as server:
